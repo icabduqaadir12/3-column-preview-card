@@ -41,7 +41,7 @@ body main .cards {
 @media (min-width: 1024px) {
   body main .cards {
     grid-template-columns: repeat(3, 1fr);
-    width: 90%;
+    padding: 3rem;
   }
 }
 body main .cards .card {
@@ -70,7 +70,7 @@ body main .cards .card__description {
 }
 @media (min-width: 768px) {
   body main .cards .card__description {
-    font-size: 1rem;
+    font-size: 1.01rem;
   }
 }
 body main .cards .card__btn {

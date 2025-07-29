@@ -47,8 +47,9 @@ body {
                 grid-template-columns: repeat(2,1fr);
             }
             @media (min-width: 1024px) {
+                // flex-direction: row;
                 grid-template-columns: repeat(3,1fr);
-                width: 90%;
+                padding: 3rem;
             }
 
            .card {
@@ -79,7 +80,7 @@ body {
                 font-weight: 300;
 
                 @media (min-width: 768px) {
-                    font-size: 1rem;
+                    font-size: 1.01rem;
                 }
             }
 
