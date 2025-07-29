@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// ### Primary
+
+$gold-500: hsl(31, 77%, 52%);
+$cyan-800: hsl(184, 100%, 22%);
+$green-950: hsl(179, 100%, 13%);
+
+// ### Neutral
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+// Transparent-white (paragraphs): hsla(0, 0%, 100%, 0.75)
+$gray-100: hsl(0, 0%, 95%);
+// Gray-100 (background, headings, buttons): hsl(0, 0%, 95%)
+
+body {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Lexend Deca", sans-serif;
+
+    main {
+        padding: 1.5rem;
+        max-width: 400px;
+
+        @media (min-width: 768px) {
+            max-width: 1200px;
+        }
+
+        @media (min-width: 375px) and (max-width: 768px) {
+            max-width: 430px;
+            padding: 1rem;
+        }
+
+        .cards {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            // flex-direction: column;
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media (min-width: 1024px) {
+                // flex-direction: row;
+                grid-template-columns: repeat(3,1fr);
+                padding: 3rem;
+            }
+
+           .card {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            // padding: 2.5rem 2rem;
+            padding: 3rem;
+
+            @media (min-width: 768px) {
+                padding: 4rem;
+            }
+
+           
+
+            &__title {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-family: "Big Shoulders", sans-serif;
+                color: $gray-100;
+            }
+
+            &__description {
+                color: $transparent-white;
+                line-height: 1.8;
+                font-size: 0.95rem;
+                font-weight: 300;
+
+                @media (min-width: 768px) {
+                    font-size: 1.01rem;
+                }
+            }
+
+            &__btn {
+                width: 65%;
+                align-self: flex-start;
+                padding: 1.05rem 2rem;
+                border-radius: 50px;
+                border: none;
+                font-size: 0.875rem;
+                font-weight: 600;
+
+                &:hover {
+                    background: none;
+                    border: 3px solid $transparent-white;
+                    color: $transparent-white !important;
+                }
+
+                @media (min-width: 768px) {
+                    margin-top: 20px;
+                }
+            }
+
+            &--sedans {
+                background-color: $gold-500;
+                border-radius: 10px 10px 0 0;
+
+                .card__btn {
+                    color: $gold-500;
+                }
+
+                @media (min-width: 1024px) {
+                    border-radius: 10px 0 0 10px;
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    border-radius: 10px 0 0 0;
+                }
+            }
+
+            &--suvs {
+                background-color: $cyan-800;
+
+                .card__btn {
+                    color: $cyan-800;
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    border-radius: 0 10px 10px 0;
+                }
+            }
+
+            &--luxury {
+                background-color: $green-950;
+                border-radius: 0 0 10px 10px;
+
+                .card__btn {
+                    color: $green-950;
+                }
+
+                @media (min-width: 1024px) {
+                    border-radius: 0 10px 10px 0;
+                }
+
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    border-radius: 0 0 10px 10px;
+                }
+            }
+           }
+        }
+    }
+
+
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        a { 
+            color: hsl(228, 45%, 44%); 
+        }
+    }
+}
