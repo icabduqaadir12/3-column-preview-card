@@ -37,7 +37,6 @@ Users should be able to:
 - Using **BEM** methodology to structure SCSS cleanly
 - Creating a **2-column layout on tablets** and **3-column layout on desktops**
 - Reusing components with modifiers (e.g., `.card--sedans`, `.card--luxury`)
-```
 
 ## 🔄 Continued development
 
